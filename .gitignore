@@ -1,0 +1,5 @@
+# Ignore all .txt files (these are input files)
+**/*.txt
+
+# Ignore current year's AoC code for now
+2024/*
