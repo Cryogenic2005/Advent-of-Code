@@ -26,6 +26,8 @@ def main():
     with open(INPUT, 'r') as f:
         lines = f.readlines()
     
+    lines = [line.strip() for line in lines] # Remove leading/trailing whitespace
+    
     sum, values = solve(lines)
     print(f"Sum: {sum}\n")
             
