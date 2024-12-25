@@ -6,8 +6,6 @@ TYPE = Path(__file__).parent.name # "gold" or "silver"
 INPUT = ROOT / 'data' / 'input' / DATA_FILENAME
 OUTPUT = ROOT / 'data' / 'output' / TYPE / DATA_FILENAME
 
-REOUTPUT_INPUT = False
-
 def solve(lines: list[str]) -> int:
     total = 0
     values = []
@@ -35,10 +33,6 @@ def main():
     with open(OUTPUT, 'w') as f:
         f.write(str(sum) + '\n\n')
         f.write(str(values) + '\n\n')
-        
-        if REOUTPUT_INPUT:
-            for i, value in enumerate(values):
-                f.write(f'{lines[i].strip()} -> {value}\n')
         
 if __name__ == '__main__':
     main()
